@@ -2,642 +2,236 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Joshua Eldrick Mapagu &mdash; Portfolio</title>
-  <meta name="description"
-    content="Portfolio of Joshua Eldrick Mapagu, a passionate developer building thoughtful digital experiences.">
-  <link rel="icon"
-    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23050505'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%238b5cf6'/%3E%3C/svg%3E">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Joshua Eldrick Mapagu | Mobile and Web Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
-    rel="stylesheet">
-    <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
-/>
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-
-  <!-- ============ WELCOME ============ -->
-  <div class="welcome-screen" id="welcomeScreen" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle">
-    <div class="welcome-content">
-      <h1 id="welcomeTitle">welcome to my <span class="welcome-accent">portfolio</span> website<span
-          class="welcome-accent">.</span></h1>
-    </div>
-  </div>
-
-  <!-- ============ NAV ============ -->
-  <nav class="navbar" id="navbar">
-    <div class="navbar-inner">
-      <a href="#home" class="logo"><span class="logo-mark"></span>Joshua Eldrick</a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home" id="nav-home">Home</a></li>
-        <li><a href="#about" id="nav-about">About</a></li>
-        <li><a href="#portfolio" id="nav-portfolio">Portfolio</a></li>
-        <li><a href="#handshake" id="nav-contact">Contact</a></li>
-      </ul>
-      <div class="nav-right">
-        <a class="btn-github" href="https://github.com/shva999" target="_blank" rel="noopener" aria-label="Visit GitHub profile">
-          <svg width="25" height="25" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-            <path
-              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
-          </svg>
-          <span>GitHub</span>
-        </a>
-        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M3 6h18M3 12h18M3 18h18" />
-          </svg>
-        </button>
-      </div>
-    </div>
-  </nav>
-
-  <!-- ============ HOME ============ -->
-  <section class="hero" id="home">
-    <!-- Ambient background blobs -->
-    <div class="hero-blob hero-blob-1"></div>
-    <div class="hero-blob hero-blob-2"></div>
-    <div class="hero-blob hero-blob-3"></div>
-    <!-- Particle canvas -->
-    <canvas id="heroCanvas"></canvas>
-    <div class="hero-vignette"></div>
-
-    <div class="hero-layout">
-      <!-- LEFT: All content -->
-      <div class="hero-content">
-        <div class="eyebrow hero-eyebrow"><span>Available for new opportunities</span></div>
-        <h1>Hi, I'm <span class="accent">Joshua</span><br>Eldrick Mapagu</h1>
-        <p class="hero-sub">A passionate developer who loves turning complex ideas into clean, thoughtful digital
-          experiences.</p>
-        <div class="hero-actions">
-          <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
-          <a href="#handshake" class="btn btn-ghost">Get in Touch</a>
-        </div>
-        <!-- Stats -->
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <span class="hero-stat-value">3+</span>
-            <span class="hero-stat-label">Years Learning</span>
-          </div>
-          <div class="hero-stat">
-            <span class="hero-stat-value">10+</span>
-            <span class="hero-stat-label">Projects Built</span>
-          </div>
-          <div class="hero-stat">
-            <span class="hero-stat-value">15+</span>
-            <span class="hero-stat-label">Technologies</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- RIGHT: School ID Card -->
-      <div class="id-card-wrapper">
-        <!-- Dynamic Lanyard SVG rendering behind card -->
-        <svg class="id-lanyard" id="idLanyard" viewBox="0 0 300 400">
-          <defs>
-            <linearGradient id="lanyardGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#a78bfa" />
-              <stop offset="50%" stop-color="#8b5cf6" />
-              <stop offset="100%" stop-color="#6d28d9" />
-            </linearGradient>
-          </defs>
-          <path id="lanyardPath" d="" />
-        </svg>
-
-        <div class="id-card" id="idCard">
-          <div class="id-card-clip"></div>
-          <div class="id-card-header">
-            <div class="id-school-logo"><span class="id-logo-mark"></span></div>
-            <div class="id-school-info">
-              <div class="id-school-name">National University<br>Philippines</div>
-              <div class="id-school-subtitle">College of Computing and Information Technology</div>
-            </div>
-          </div>
-          <div class="id-stripe"></div>
-          <div class="id-card-photo-wrap">
-            <img src="assets/mapagu-joshua.jpg" alt="Joshua Eldrick Mapagu" class="id-card-photo" id="idPhoto"
-              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-            <div class="id-photo-placeholder">
-              <svg viewBox="0 0 80 80" fill="none">
-                <circle cx="40" cy="32" r="18" fill="rgba(139,92,246,0.4)" />
-                <ellipse cx="40" cy="68" rx="26" ry="16" fill="rgba(139,92,246,0.4)" />
-              </svg>
-            </div>
-          </div>
-          <div class="id-card-info">
-            <div class="id-name">Joshua Eldrick Mapagu</div>
-            <div class="id-course">BS Information Technology</div>
-            <div class="id-number">IT Specialist</div>
-          </div>
-          <div class="id-card-footer">
-            <div class="id-barcode">
-              <div class="id-barcode-lines"></div>
-              <span>IT-2024-00142</span>
-            </div>
-          </div>
-          <div class="id-holo"></div>
-        </div>
-        <div class="id-shadow"></div>
-      </div>
-    </div>
-
-    <div class="scroll-cue"><span>Scroll</span><span class="line"></span></div>
-  </section>
-
-  <!-- ============ ABOUT ============ -->
-  <section class="section" id="about">
+  <header>
     <div class="wrap">
-      <div class="section-head reveal">
-        <div class="eyebrow">About</div>
-        <h2>A little about me</h2>
-      </div>
-      <div class="about-grid-new">
-        <div class="about-text-col">
-          <div class="about-text reveal">
-            <p>Hi! I'm <strong>Joshua Eldrick Mapagu</strong>, an Information Technology student with a passion for
-              building
-              beautiful, functional web experiences. I enjoy working on both the front-end and back-end, bridging design
-              and logic to create software people actually love to use.</p>
-            <p>I'm a quick learner who loves exploring new technologies, collaborating with teams, and solving
-              real-world problems through code. When I'm not studying, you'll find me tinkering with side projects,
-              learning new frameworks, or sketching UI ideas.</p>
-            <ul class="now-list">
-              <li><span class="now-dot"></span>Currently studying BS Information Technology</li>
-              <li><span class="now-dot"></span>Building personal projects &amp; portfolio</li>
-              <li><span class="now-dot"></span>Open to internships and opportunities</li>
-            </ul>
-          </div>
-          <div class="about-ctas reveal">
-            <a href="assets/cv_file/jem-cv.pdf" class="btn btn-primary" id="btn-print-cv" target="_blank" rel="noopener"
-              download>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
-                <polyline points="14 2 14 8 20 8" />
-                <line x1="16" y1="13" x2="8" y2="13" />
-                <line x1="16" y1="17" x2="8" y2="17" />
-              </svg>
-              Download CV
-            </a>
-            <a href="#portfolio" class="btn btn-ghost" id="btn-view-portfolio">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
-                <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16" />
-              </svg>
-              View Portfolio
-            </a>
-          </div>
-        </div>
-
-        <div class="about-photo-col reveal">
-          <div class="about-photo-ring">
-            <img src="assets/mapagu-joshua.jpg" alt="Joshua Eldrick Mapagu" class="about-photo"
-              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-            <div class="about-photo-fallback">
-              <svg viewBox="0 0 120 120" fill="none">
-                <circle cx="60" cy="48" r="28" fill="rgba(139,92,246,0.5)" />
-                <ellipse cx="60" cy="100" rx="42" ry="28" fill="rgba(139,92,246,0.5)" />
-              </svg>
-            </div>
-          </div>
-          <div class="about-photo-glow"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ PORTFOLIO ============ -->
-  <section class="section" id="portfolio">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div class="eyebrow">Portfolio</div>
-        <h2>My Work &amp; Skills</h2>
-      </div>
-
-      <div class="portfolio-tabs reveal">
-        <button class="ptab active" id="ptab-experience" data-tab="experience">Experience</button>
-        <button class="ptab" id="ptab-projects" data-tab="projects">Projects</button>
-        <button class="ptab" id="ptab-stack" data-tab="stack">Tech Stack</button>
-        <button class="ptab" id="ptab-certifications" data-tab="certifications">Certifications</button>
-
-      </div>
-
-      <!-- Experience Panel -->
-      <div class="portfolio-panel active" id="panel-experience">
-        <div class="timeline">
-          <div class="t-item reveal">
-            <div class="t-head"><span class="t-role">Senior High School ICT Strand</span><span class="t-date">2021
-                &mdash;
-                2023</span></div>
-            <div class="t-company">Our Lady of Perpetual Succor College</div>
-            <ul class="t-desc">
-              <li>Graduated with High Honors from the ICT strand, with a strong foundation in programming and
-                information technology.</li>
-              <li>Developed websites and inventory management systems using Java, MySQL, HTML, CSS, and JavaScript.</li>
-              <li>Gained hands-on experience in database management and database-driven application development through
-                academic projects.</li>
-            </ul>
-          </div>
-          <div class="t-item reveal">
-            <div class="t-head"><span class="t-role">BS Information Technology</span><span class="t-date">2024 &mdash;
-                Present</span></div>
-            <div class="t-company">National University Philippines</div>
-            <ul class="t-desc">
-              <li>Developed multiple academic projects involving web applications, database systems, and object-oriented
-                programming.</li>
-              <li>Led a team of 5 in building a Smart Hospital Management with PHP, HTML, JS, CSS, and MySQL for the
-                database.</li>
-              <li>Applied Java, Python, PHP, MySQL, JavaScript, React, HTML, and CSS in coursework and software
-                development projects.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Projects Panel -->
-      <div class="portfolio-panel" id="panel-projects">
-        <div class="project-grid">
-          <div class="project-card reveal" tabindex="0" role="button" aria-expanded="false">
-            <div class="project-top"><span class="project-index">01</span>
-              <div class="project-links">
-                <a href="#" aria-label="Live site" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2">
-                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
-                    <path d="M15 3h6v6" />
-                    <path d="M10 14L21 3" />
-                  </svg></a>
-                <a href="#" aria-label="Source code" target="_blank" rel="noopener"><svg viewBox="0 0 16 16"
-                    fill="currentColor">
-                    <path
-                      d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
-                  </svg></a>
-              </div>
-            </div>
-            <div class="project-preview preview-wavelength" aria-label="Wavelength whiteboard preview">
-              <div class="preview-toolbar"><span></span><span></span><span></span><b>WAVELENGTH</b></div>
-              <div class="whiteboard-grid"><i></i><i></i><i></i><i></i><i></i></div>
-              <div class="sticky-note note-one">ideas<br><small>sync live</small></div>
-              <div class="sticky-note note-two">ship it</div>
-              <div class="preview-cursor"></div>
-            </div>
-            <h3>Wavelength</h3>
-            <p>A real-time collaborative whiteboard with conflict-free syncing across dozens of concurrent editors.</p>
-            <div class="project-tags"><span>React</span><span>WebSocket</span><span>Redis</span></div>
-          </div>
-          <div class="project-card reveal" tabindex="0" role="button" aria-expanded="false">
-            <div class="project-top"><span class="project-index">02</span>
-              <div class="project-links">
-                <a href="#" aria-label="Live site" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2">
-                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
-                    <path d="M15 3h6v6" />
-                    <path d="M10 14L21 3" />
-                  </svg></a>
-                <a href="#" aria-label="Source code" target="_blank" rel="noopener"><svg viewBox="0 0 16 16"
-                    fill="currentColor">
-                    <path
-                      d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
-                  </svg></a>
-              </div>
-            </div>
-            <div class="project-preview preview-pathfinder" aria-label="Pathfinder route planning preview">
-              <div class="map-roads"><i></i><i></i><i></i></div>
-              <div class="route-line"></div><span class="map-pin pin-start"></span><span class="map-pin pin-end"></span>
-              <div class="route-panel"><b>ROUTE OPTIMIZED</b><span>18% less mileage</span></div>
-            </div>
-            <h3>Pathfinder</h3>
-            <p>A route-optimization API that cut average delivery-fleet mileage by 18% for a logistics client.</p>
-            <div class="project-tags"><span>Python</span><span>PostGIS</span><span>FastAPI</span></div>
-          </div>
-          <div class="project-card reveal" tabindex="0" role="button" aria-expanded="false">
-            <div class="project-top"><span class="project-index">03</span>
-              <div class="project-links">
-                <a href="#" aria-label="Live site" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2">
-                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
-                    <path d="M15 3h6v6" />
-                    <path d="M10 14L21 3" />
-                  </svg></a>
-                <a href="#" aria-label="Source code" target="_blank" rel="noopener"><svg viewBox="0 0 16 16"
-                    fill="currentColor">
-                    <path
-                      d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
-                  </svg></a>
-              </div>
-            </div>
-            <div class="project-preview preview-ledger" aria-label="Ledger finance dashboard preview">
-              <div class="ledger-header"><b>ledger</b><span>APR 2026</span></div>
-              <div class="ledger-balance"><small>TOTAL BALANCE</small><strong>$24,680.42</strong></div>
-              <div class="ledger-chart"><i></i><i></i><i></i><i></i><i></i><i></i></div>
-              <div class="ledger-bars"><span></span><span></span><span></span></div>
-            </div>
-            <h3>Ledger</h3>
-            <p>A personal finance dashboard that unifies accounts and surfaces spending trends automatically.</p>
-            <div class="project-tags"><span>Next.js</span><span>PostgreSQL</span><span>Plaid API</span></div>
-          </div>
-          <div class="project-card reveal" tabindex="0" role="button" aria-expanded="false">
-            <div class="project-top"><span class="project-index">04</span>
-              <div class="project-links">
-                <a href="#" aria-label="Live site" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2">
-                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
-                    <path d="M15 3h6v6" />
-                    <path d="M10 14L21 3" />
-                  </svg></a>
-                <a href="#" aria-label="Source code" target="_blank" rel="noopener"><svg viewBox="0 0 16 16"
-                    fill="currentColor">
-                    <path
-                      d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
-                  </svg></a>
-              </div>
-            </div>
-            <div class="project-preview preview-nimbus" aria-label="Nimbus CLI terminal preview">
-              <div class="terminal-head"><span></span><span></span><span></span><b>nimbus-cli</b></div>
-              <div class="terminal-copy"><span>$ nimbus create app</span><b>project ready</b><small>server started on :3000</small></div>
-              <div class="terminal-progress"><i></i></div>
-            </div>
-            <h3>Nimbus CLI</h3>
-            <p>An open-source command-line tool for scaffolding and deploying full-stack projects in seconds.</p>
-            <div class="project-tags"><span>Node.js</span><span>TypeScript</span><span>Docker</span></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Tech Stack Panel -->
-      <div class="portfolio-panel" id="panel-stack">
-  <div class="stack-grid reveal">
-
-    <!-- Frontend -->
-    <div class="stack-category">
-      <div class="stack-cat-title">Frontend</div>
-
-      <div class="tags">
-
-        <span class="tag">
-          <i class="devicon-javascript-plain colored" aria-hidden="true"></i>
-          JavaScript
-        </span>
-
-        <span class="tag">
-          <i class="devicon-typescript-plain colored" aria-hidden="true"></i>
-          TypeScript
-        </span>
-
-        <span class="tag">
-          <i class="devicon-react-original colored" aria-hidden="true"></i>
-          React
-        </span>
-
-        <span class="tag">
-          <i class="devicon-nextjs-plain" aria-hidden="true"></i>
-          Next.js
-        </span>
-
-        <span class="tag">
-          <i class="devicon-html5-plain colored" aria-hidden="true"></i>
-          HTML
-        </span>
-
-        <span class="tag">
-          <i class="devicon-css3-plain colored" aria-hidden="true"></i>
-          CSS
-        </span>
-
-      </div>
-    </div>
-
-
-    <!-- Backend -->
-    <div class="stack-category">
-      <div class="stack-cat-title">Backend</div>
-
-      <div class="tags">
-
-        <span class="tag">
-          <i class="devicon-nodejs-plain colored" aria-hidden="true"></i>
-          Node.js
-        </span>
-
-        <span class="tag">
-          <i class="devicon-python-plain colored" aria-hidden="true"></i>
-          Python
-        </span>
-
-        <span class="tag">
-          <i class="devicon-fastapi-plain colored" aria-hidden="true"></i>
-          FastAPI
-        </span>
-
-        <span class="tag">
-          <i class="devicon-php-plain colored" aria-hidden="true"></i>
-          PHP
-        </span>
-
-        <span class="tag">
-          <i class="devicon-java-plain colored" aria-hidden="true"></i>
-          Java
-        </span>
-
-        <span class="tag">
-          <i class="devicon-react-original colored" aria-hidden="true"></i>
-          React Native
-        </span>
-
-        <span class="tag">
-          <i class="devicon-express-original" aria-hidden="true"></i>
-          REST APIs
-        </span>
-
-      </div>
-    </div>
-
-
-    <!-- Database & DevOps -->
-    <div class="stack-category">
-      <div class="stack-cat-title">Database &amp; DevOps</div>
-
-      <div class="tags">
-
-        <span class="tag">
-          <i class="devicon-mysql-plain colored" aria-hidden="true"></i>
-          MySQL
-        </span>
-
-        <span class="tag">
-          <i class="devicon-sqlite-plain colored" aria-hidden="true"></i>
-          SQLite
-        </span>
-
-        <span class="tag">
-          <i class="devicon-php-plain colored" aria-hidden="true"></i>
-          phpMyAdmin
-        </span>
-
-        <span class="tag">
-          <i class="devicon-git-plain colored" aria-hidden="true"></i>
-          Git
-        </span>
-
-        <span class="tag">
-          <i class="devicon-github-original" aria-hidden="true"></i>
-          GitHub
-        </span>
-
-      </div>
-    </div>
-
-
-    <!-- Tools & Design -->
-    <div class="stack-category">
-      <div class="stack-cat-title">Tools &amp; Design</div>
-
-      <div class="tags">
-
-        <span class="tag">
-          <i class="devicon-vscode-plain colored" aria-hidden="true"></i>
-          VS Code
-        </span>
-
-        <span class="tag">
-          <i class="devicon-figma-plain colored" aria-hidden="true"></i>
-          Figma
-        </span>
-
-        <span class="tag">
-          <i class="devicon-npm-original-wordmark colored" aria-hidden="true"></i>
-          npm
-        </span>
-
-      </div>
-    </div>
-
-  </div>
-</div>
-
-  <!-- Certifications Panel -->
-  <div class="portfolio-panel" id="panel-certifications">
-    <div class="wrap">
-      <div class="cert-window-grid">
-        <button class="cert-window cert-window-amber" type="button" aria-expanded="false"
-          data-cert-title="Hardware Basics" data-cert-label="Computer hardware foundation"
-          data-cert-copy="A certificate covering foundational computer hardware concepts, components, and essential system knowledge."
-          data-cert-focus="Computer Hardware" data-cert-png="assets/certifications/hardwareBasics.png" data-cert-mark="01">
-          <span class="cert-window-bar"><span class="window-dots"><i></i><i></i><i></i></span><span>hardware / foundations</span><span>+</span></span>
-          <span class="cert-window-body"><img class="cert-preview" src="assets/certifications/hardwareBasics.png" alt="Hardware Basics certificate preview"><strong>Hardware Basics</strong><small>Computer hardware foundation</small><em>Open certificate <span aria-hidden="true">&#8594;</span></em></span>
-        </button>
-        <button class="cert-window cert-window-cyan" type="button" aria-expanded="false"
-          data-cert-title="Networking Basics" data-cert-label="Network foundation"
-          data-cert-copy="A certificate covering foundational networking concepts, connectivity, and the principles behind modern computer networks."
-          data-cert-focus="Computer Networking" data-cert-png="assets/certifications/networkingBasics.png" data-cert-mark="02">
-          <span class="cert-window-bar"><span class="window-dots"><i></i><i></i><i></i></span><span>network / foundations</span><span>+</span></span>
-          <span class="cert-window-body"><img class="cert-preview" src="assets/certifications/networkingBasics.png" alt="Networking Basics certificate preview"><strong>Networking Basics</strong><small>Network foundation</small><em>Open certificate <span aria-hidden="true">&#8594;</span></em></span>
-        </button>
-        <button class="cert-window cert-window-pink" type="button" aria-expanded="false"
-          data-cert-title="Networking Devices Basics" data-cert-label="Network devices foundation"
-          data-cert-copy="A certificate covering common networking devices, their roles, and how they support connected computer systems."
-          data-cert-focus="Networking Devices" data-cert-png="assets/certifications/networkingDevicesBasics.png" data-cert-mark="03">
-          <span class="cert-window-bar"><span class="window-dots"><i></i><i></i><i></i></span><span>network / devices</span><span>+</span></span>
-          <span class="cert-window-body"><img class="cert-preview" src="assets/certifications/networkingDevicesBasics.png" alt="Networking Devices Basics certificate preview"><strong>Networking Devices Basics</strong><small>Network devices foundation</small><em>Open certificate <span aria-hidden="true">&#8594;</span></em></span>
-        </button>
-        <button class="cert-window cert-window-green" type="button" aria-expanded="false"
-          data-cert-title="Accenture Talks" data-cert-label="Professional learning session"
-          data-cert-copy="A certificate recognizing participation in an Accenture Talks professional learning session."
-          data-cert-focus="Professional Development" data-cert-png="assets/certifications/AccentureTalks.PNG" data-cert-mark="04">
-          <span class="cert-window-bar"><span class="window-dots"><i></i><i></i><i></i></span><span>career / talks</span><span>+</span></span>
-          <span class="cert-window-body"><img class="cert-preview" src="assets/certifications/AccentureTalks.PNG" alt="Accenture Talks certificate preview"><strong>Accenture Talks</strong><small>Professional learning session</small><em>Open certificate <span aria-hidden="true">&#8594;</span></em></span>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <div class="cert-dialog" id="certDialog" role="dialog" aria-modal="true" aria-labelledby="certDialogTitle" hidden>
-    <div class="cert-dialog-backdrop" data-cert-close></div>
-    <div class="cert-dialog-window">
-      <div class="cert-window-bar"><span class="window-dots"><i></i><i></i><i></i></span><span id="certDialogLabel">certificate</span><button type="button" aria-label="Close certificate" data-cert-close>&times;</button></div>
-      <div class="cert-dialog-content"><img class="cert-dialog-image" id="certDialogImage" alt="Certificate preview"><div class="eyebrow">Certificate</div><h3 id="certDialogTitle"></h3><p id="certDialogCopy"></p><div class="cert-dialog-focus"><span>Focus</span><strong id="certDialogFocus"></strong></div><a class="cert-dialog-link" id="certDialogOpen" href="#" target="_blank" rel="noopener">Open PNG in new tab <span aria-hidden="true">&#8599;</span></a></div>
-    </div>
-  </div>
-</section>
-
-  <!-- ============ HANDSHAKE TRANSITION ============ -->
-  <section class="handshake-section" id="handshake" aria-label="Start a conversation">
-    <div class="handshake-stage">
-      <span class="scroll-hint">keep scrolling</span>
-      <div class="contact-headline">
-        <h2>Every good project starts with a handshake.</h2>
-        <p>Tell me what you are building and let us make it real.</p>
-      </div>
-      <div class="hand-stage-inner">
-        <div class="spark"></div>
-        <div class="hand hand-left"><div class="hand-inner"><svg class="hand-svg" viewBox="0 0 242 160" aria-hidden="true"><use href="#hand-shape"></use></svg></div></div>
-        <div class="hand hand-right"><div class="hand-inner"><svg class="hand-svg hand-svg-right" viewBox="0 0 242 160" aria-hidden="true"><use href="#hand-shape"></use></svg></div></div>
-      </div>
-    </div>
-  </section>
-
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <symbol id="hand-shape" viewBox="0 0 242 160">
-      <circle cx="82" cy="31" r="17" fill="currentColor" />
-      <path d="M49 151V84c0-15 12-27 27-27h13c15 0 27 12 27 27v67Z" fill="currentColor"/>
-      <path d="M56 78h53l-14 17H70Z" fill="currentColor" />
-      <path d="M78 96h11l-5 38Z" fill="currentColor" />
-      <path d="M93 85c16 8 30 21 45 29l35 1c8 0 8 12 0 14l-40 1c-18-5-32-11-48-18Z" fill="currentColor" />
-      <circle cx="174" cy="121" r="9" fill="currentColor" />
-      <path d="M65 151 49 160h66l-13-9Z" fill="currentColor" />
-    </symbol>
-  </svg>
-
-  <!-- ============ CONTACT ============ -->
-  <section class="section" id="contact">
-    <div class="wrap contact-inner">
-      <div class="section-head reveal">
-        <div class="eyebrow">Contact</div>
-        <h2>Let's build something</h2>
-      </div>
-      <form class="contact-form reveal" id="contactForm">
-        <label for="contactName">Your name</label>
-        <input id="contactName" name="name" type="text" autocomplete="name" placeholder="Your name" required>
-        <label for="contactMessage">Comment</label>
-        <textarea id="contactMessage" name="comment" rows="5" maxlength="500" placeholder="Tell me what you are working on..." required></textarea>
-        <div class="contact-form-meta"><span id="contactPrompt">I usually reply within 24 hours.</span><span><output id="contactCount">0</output> / 500</span></div>
-        <button class="btn btn-primary" type="submit"><span>Send message</span><span aria-hidden="true">&#8599;</span></button>
-        <p class="contact-form-status" id="contactFormStatus" role="status" aria-live="polite"></p>
-      </form>
-      <div class="socials reveal">
-        <a href="https://github.com/shva999" target="_blank" rel="noopener" aria-label="GitHub">
-          <svg viewBox="0 0 16 16" fill="currentColor">
-            <path
-              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+      <a class="logo" href="#home">Joshua Mapagu</a>
+      <nav aria-label="Main" id="mainNav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#stack">Tech stack</a>
+        <a href="#contact">Contact</a>
+        <button class="cv" id="cvMenu" type="button">Download CV</button>
+      </nav>
+      <div class="hr">
+        <button class="cv" id="cvHead" type="button" aria-label="Download CV">
+          <svg class="cv-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 15V3" />
+            <path d="M7 10l5 5 5-5" />
+            <rect x="3" y="17" width="18" height="4" rx="2" />
           </svg>
-        </a>
-        <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <svg viewBox="0 0 16 16" fill="currentColor">
-            <path
-              d="M13.5 0h-13C.22 0 0 .22 0 .5v13c0 .28.22.5.5.5h13c.28 0 .5-.22.5-.5v-13c0-.28-.22-.5-.5-.5zM4.5 12.5h-2v-6h2v6zm-1-6.75c-.69 0-1.25-.56-1.25-1.25S2.81 3.25 3.5 3.25s1.25.56 1.25 1.25-.56 1.25-1.25 1.25zm8.5 6.75h-2v-3.1c0-.74-.26-1.24-.92-1.24-.5 0-.8.34-.93.67-.05.12-.06.28-.06.44v3.23h-2s.03-5.24 0-5.79h2v.82c.27-.41.74-1 1.8-1 1.31 0 2.11.86 2.11 2.7v3.27z" />
-          </svg>
-        </a>
-        <a href="mailto:joshuaeldrick@gmail.com" aria-label="Email">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <path d="M3 5h18v14H3V5zm0 0l9 7 9-7" />
-          </svg>
-        </a>
+          <span class="cv-lbl">Download CV</span>
+        </button>
+        <button id="theme" type="button" aria-label="Switch to dark mode">&#9790;</button>
+        <button id="menu" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">&#9776;</button>
       </div>
     </div>
-  </section>
+  </header>
 
-  <footer>
-    <div class="wrap footer-inner">
-      <span>&copy; 2026 Joshua Eldrick Mapagu. Built with care.</span>
-      <a href="#home" class="back-top">Back to top &uarr;</a>
+  <main id="top">
+    <div class="hero" id="home">
+      <div class="wrap">
+        <div>
+          <p class="role"><span class="sr">Innovator, problem solver, team player, lifelong learner, detail-driven
+              builder</span><span aria-hidden="true"><span class="kw">const </span><span class="id">mindset</span> =
+              "<span class="str" id="typed">Innovator</span><span class="caret"></span>";</span></p>
+          <h1>Joshua Eldrick Mapagu</h1>
+          <p class="lead">Dean&rsquo;s Lister BSIT student at National University. I build systems for everyday problems, from fuel price tracking to eco-awareness platforms.</p>
+          <div class="btns">
+            <a class="btn primary" href="#projects">View projects <span class="arr arr-d"
+                aria-hidden="true">&darr;</span></a>
+            <a class="btn solid" href="#contact">Work with me <span class="arr arr-r" aria-hidden="true">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="photo" tabindex="0" role="button" aria-label="Profile photo of Joshua. Hover to preview, click to lock.">
+          <div class="frame">
+            <img src="assets/violet-pfp.jpg" class="p1" id="photo1" alt="Joshua Eldrick Mapagu">
+            <img src="assets/pfp.jpg" class="p2" id="photo2" alt="" aria-hidden="true">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="marquee" aria-label="Tech stack">
+      <div class="track" id="track"></div>
+    </div>
+    <div class="stackbar"><button class="btn ghost" type="button" id="stackBtn" aria-expanded="false"
+        aria-controls="stackCol"><span id="stackLbl">See full tech stack</span> <span class="arr arr-d"
+          aria-hidden="true">&darr;</span></button></div>
+    <section id="stack">
+      <div class="collapse" id="stackCol">
+        <div class="inner">
+          <div class="wrap">
+            <div class="box">
+              <div class="head">
+                <h2>Tech stack</h2><button class="nb" type="button" id="stackClose"
+                  aria-label="Close tech stack">&times;</button>
+              </div>
+              <div class="cats" id="cats"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="box abox">
+          <div>
+            <h2>About me</h2>
+            <div class="txt">
+              <p>I study mobile and web application development at National University, and I like projects that solve a
+                concrete problem for real people.</p>
+              <p>On team projects I take the <strong>backend and project management</strong> side: designing the API,
+                keeping the data tidy, and keeping the team on schedule.</p>
+            </div>
+          </div>
+          <div>
+            <h2>Education</h2>
+            <div class="item">
+              <h3>National University</h3>
+              <p class="when">B.S. in Information Technology &mdash; Mobile and Web Application (2024 &ndash; Present)</p>
+              <p>College of Computing and Information Technologies &bull; Consistent Dean&rsquo;s Lister (3.50+ GPA)</p>
+            </div>
+            <div class="item">
+              <h3>Our Lady of Perpetual Succor College</h3>
+              <p class="when">Senior High School &mdash; TVL-ICT Track (Graduated 2023)</p>
+              <p>Marikina &bull; Final Capstone: Fire Dispatch Dashboard</p>
+            </div>
+          </div>
+          <div class="ach" id="achievements">
+            <h2>Achievements</h2>
+            <p class="lead2">What I did in school, and what it means for real projects.</p>
+            <div class="ph"><span>In school</span><span></span><span>In the real world</span></div>
+            <div class="pair">
+              <div data-l="In school">
+                <h3>Dean&rsquo;s Lister &amp; Academic Honors</h3>
+                <p>National University CCIT &mdash; consistent 3.50+ GPA from first semester through present.</p>
+              </div>
+              <span class="ar" aria-hidden="true">&rarr;</span>
+              <div data-l="In the real world">
+                <h3>Consistency and discipline</h3>
+                <p>Reliable execution, fast learning, and high standards in every sprint.</p>
+              </div>
+            </div>
+            <div class="pair">
+              <div data-l="In school">
+                <h3>Backend and Project Manager, PetroVision</h3>
+                <p>Five-person team for the Systems Integration final project, submitted October 2026.</p>
+              </div>
+              <span class="ar" aria-hidden="true">&rarr;</span>
+              <div data-l="In the real world">
+                <h3>Lead a team to a deadline</h3>
+                <p>Planning, splitting tasks and clear documentation.</p>
+              </div>
+            </div>
+            <div class="pair">
+              <div data-l="In school">
+                <h3>Designed APIs and system architecture</h3>
+                <p>Layered architecture with hub-and-spoke integration across mobile, web and cloud.</p>
+              </div>
+              <span class="ar" aria-hidden="true">&rarr;</span>
+              <div data-l="In the real world">
+                <h3>Connect apps and data reliably</h3>
+                <p>One backend serving mobile and web clients.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="big">
+      <div class="wrap wide">
+        <div class="box">
+          <div class="head">
+            <h2>Projects</h2>
+            <div class="ctl"><span class="count" aria-live="polite"></span><button class="nb" type="button"
+                data-dir="-1" aria-label="Previous project">&larr;</button><button class="nb" type="button" data-dir="1"
+                aria-label="Next project">&rarr;</button></div>
+          </div>
+          <div class="car">
+            <div class="slides" id="projSlides" tabindex="0" aria-label="Projects"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certificates" class="big">
+      <div class="wrap wide">
+        <div class="box">
+          <div class="head">
+            <h2>Certificates</h2>
+            <div class="ctl"><span class="count" aria-live="polite"></span><button class="nb" type="button"
+                data-dir="-1" aria-label="Previous certificate">&larr;</button><button class="nb" type="button" data-dir="1"
+                aria-label="Next certificate">&rarr;</button></div>
+          </div>
+          <div class="car">
+            <div class="slides" id="certSlides" tabindex="0" aria-label="Certificates"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap endtop">
+        <div>
+          <h2>Contact me</h2>
+          <p>Email me what you're building and when you need it. You can also message me on GitHub or LinkedIn.</p>
+        </div>
+        <div class="links">
+          <a href="mailto:yourname@email.com">Email <span>yourname@email.com</span></a>
+          <a href="https://github.com/your-username">GitHub <span>github.com/your-username</span></a>
+          <a href="https://www.linkedin.com/in/your-username">LinkedIn <span>linkedin.com/in/your-username</span></a>
+          <button class="cv" id="cvContact" type="button">Download my CV <span>PDF</span></button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="end">
+    <div>
+      <div class="wrap">
+        <p class="fn">Joshua Eldrick Mapagu</p>
+        <p class="fr">Mobile and web developer</p>
+        <nav class="fl" aria-label="Footer"><a href="#about">About</a><a href="#projects">Projects</a><a
+            href="#certificates">Certificates</a><a href="#contact">Contact</a><a href="#home">Back to top</a></nav>
+      </div>
+      <svg class="mark" viewBox="0 0 1000 150" role="img" aria-label="joshuamapagu">
+        <defs>
+          <linearGradient id="mg" x1="0" y1="0" x2="0" y2="1">
+            <stop class="w1" offset="0" stop-color="#ffffff" />
+            <stop class="w2" offset="1" stop-color="#b9a2ff" />
+          </linearGradient>
+        </defs><text x="8" y="112" textLength="984" lengthAdjust="spacingAndGlyphs" fill="url(#mg)">joshuamapagu</text>
+      </svg>
+      <p class="fc">&copy; 2026 Joshua Eldrick Mapagu. All rights reserved.</p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <dialog id="dlg" aria-labelledby="dlgT">
+    <button class="nb x" type="button" aria-label="Close details">&times;</button>
+    <div class="pv" id="dlgPv"></div>
+    <div class="sb">
+      <p class="st" id="dlgS"></p>
+      <h3 id="dlgT"></h3>
+      <p class="ds" id="dlgD"></p>
+      <div class="tg" id="dlgG"></div>
+    </div>
+  </dialog>
+
+  <script src="js/script.js"></script>
 </body>
 
 </html>
