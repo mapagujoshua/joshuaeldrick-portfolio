@@ -214,7 +214,7 @@ h2{font-size:1.8rem}
 .ach{border-top:0;padding-top:16px}
 .big .wrap.wide{max-width:none;padding:0}
 .big .head{max-width:1180px;margin:0 auto 28px;padding:0 24px}
-.slides{--w:min(780px,86vw);gap:24px}
+.slides{--w:min(720px,82vw);gap:24px}
 .collapse .wrap{padding-top:28px;padding-bottom:8px}
 .end{scroll-snap-align:end;min-height:calc(100vh - 60px - env(safe-area-inset-top,0px));min-height:calc(100svh - 60px - env(safe-area-inset-top,0px));display:flex;flex-direction:column;justify-content:center;margin-top:0;padding:56px 0;border-top:1px solid var(--line);color:var(--f-ink);text-align:center;background:radial-gradient(60% 70% at 50% 100%,var(--f-glow),transparent),linear-gradient(var(--f-grid) 1px,transparent 1px) 0 0/44px 44px,linear-gradient(90deg,var(--f-grid) 1px,transparent 1px) 0 0/44px 44px,var(--f-bg)}
 .endtop{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start;text-align:left;width:100%}
@@ -259,11 +259,14 @@ html{overflow-x:clip}
 }
 .certs{padding-block:36px 56px}
 .certs .slide{background:none;border:0;border-radius:0;overflow:visible}
-.certs .pv{background:none;filter:drop-shadow(0 18px 28px rgba(45,18,110,.3))}
+.certs .pv{background:none;border-radius:16px;overflow:hidden;filter:drop-shadow(0 18px 28px rgba(45,18,110,.3))}
 .certs .pv .o{stroke:none}
+.certs .pv .cert-preview{display:block;width:100%;height:100%;object-fit:contain;background:#fff}
 .certs .ov{left:50%;right:auto;bottom:16px;transform:translateX(-50%);flex-direction:row;align-items:baseline;gap:12px;padding:9px 18px;border-radius:999px;background:rgba(21,12,43,.88);white-space:nowrap}
 .certs .ov .st{display:none}
 .certs .ov strong{font-size:1rem}
+.cert-link{margin-top:8px}
+.cert-link[hidden]{display:none}
 .photo{box-shadow:0 0 38px 4px var(--glow),0 26px 50px -28px rgba(76,29,149,.55)}
 .cv{display:none;align-items:center;gap:6px;height:38px;padding:0 16px;border:1px solid var(--accent);border-radius:999px;background:transparent;color:var(--accent);font:600 .88rem var(--font);cursor:pointer;transition:background .45s var(--ease),color .45s var(--ease),border-color .45s var(--ease)}
 .cv:hover{background:var(--accent);color:var(--accent-ink)}
