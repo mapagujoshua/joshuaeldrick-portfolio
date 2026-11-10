@@ -315,7 +315,8 @@ html{overflow-x:clip}
 @media (max-width:600px){
   .end{padding:40px 0}
   .mark1{display:none}
-  .mark2{display:block;width:94%;margin-inline:auto}
+  .mark2{display:block;width:90%;margin-inline:auto}
+  .mark2 text{font-size:245px}
   .fl{gap:14px}
   :root[data-theme="dark"] #theme{color:#fff}
 }
