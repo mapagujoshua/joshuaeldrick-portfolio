@@ -18,7 +18,7 @@ try { theme = localStorage.getItem('theme'); } catch (e) {}
 if (theme !== 'light' && theme !== 'dark') theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 function apply(t){
   root.setAttribute('data-theme', t);
-  btn.textContent = t === 'dark' ? '☀' : '☾';
+  btn.textContent = t === 'dark' ? '\u2600\uFE0E' : '☾';
   btn.setAttribute('aria-label', t === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
 }
 apply(theme);
@@ -51,15 +51,17 @@ var PROJECTS = [
   ['Smart Parking','System proposal','Sensor-based slot detection with QR payment and printed receipts.',['ESP32','Node.js','MySQL']],
   ['Service Dispatch','Integration demo','Booking, technician assignment and status tracking for customers, dispatchers and technicians.',['PHP','SQL','REST API']]
 ];
-// Placeholders: replace with your real certificates
 var CERTS = [
-  ['Certificate name','Issuing organization, year','Short note on what this certificate covers.',['Skill']],
-  ['Certificate name','Issuing organization, year','Short note on what this certificate covers.',['Skill']],
-  ['Certificate name','Issuing organization, year','Short note on what this certificate covers.',['Skill']]
+  ['PMI Project Management Ready®','Project Management Institute · October 2026','Foundational credential in project management, including traditional and agile methods.',['Project management','Agile','Business analysis'],'certificates/Cert38412418227.pdf','certificates/PMI-Ready-preview.png'],
+  ['Computer Hardware Basics','Cisco Networking Academy · March 2026','Course completion covering PC components, hardware maintenance, laptops, mobile devices, and safety.',['Computer hardware','PC maintenance','Device support'],'certificates/ComputerHardwareBasicsUpdate20260514-31-f6isrq.pdf','certificates/hardwareBasics-1.png'],
+  ['Cybersecurity','ADBI E-Learning · October 2026','Course completion certificate in cybersecurity, issued by ADBI E-Learning.',['Cybersecurity'],'certificates/Joshua-Eldrick-Mapagu–Cybersecurity–Cybersecurity–ADBI-E-Learning.pdf','certificates/ADBI-Cybersecurity-preview.png'],
+  ['Networking Basics','Cisco Networking Academy · April 2026','Course completion covering network fundamentals, addressing, connectivity, and troubleshooting.',['Networking','IPv4','IPv6'],'certificates/NetworkingBasicsUpdate20260514-31-4yhqqy.pdf','certificates/networkingBasics-1.png'],
+  ['Networking Devices and Basic Configuration','Cisco Networking Academy · May 2026','Course completion covering network devices, Ethernet, IPv4 subnetting, and Cisco IOS configuration.',['Networking devices','Subnetting','Cisco IOS'],'certificates/NetworkingDevicesandBasicConfigUpdate20260514-31-szwbuq.pdf','certificates/networkingDevicesBasics-1.png']
 ];
 function fill(id, data, svg){
   document.getElementById(id).innerHTML = data.map(function(d, i){
-    return '<button type="button" class="slide" aria-label="Open details: '+d[0]+'"><span class="pv">'+svg(i)+'</span><span class="ov"><span class="st">'+d[1]+'</span><strong>'+d[0]+'</strong><em>Click for details</em></span></button>';
+    var preview = d[5] ? '<img class="cert-preview" src="'+d[5]+'" alt="Certificate preview: '+d[0]+'">' : svg(i);
+    return '<button type="button" class="slide" aria-label="Open details: '+d[0]+'"><span class="pv">'+preview+'</span><span class="ov"><span class="st">'+d[1]+'</span><strong>'+d[0]+'</strong><em>Click for details</em></span></button>';
   }).join('');
 }
 fill('projSlides', PROJECTS, projSvg);
@@ -99,11 +101,14 @@ carousel(document.getElementById('certSlides').closest('.box'), CERTS, certSvg);
 // Details dialog (captions appear only after a click)
 var dlg = document.getElementById('dlg');
 function openDlg(d, svg){
-  document.getElementById('dlgPv').innerHTML = svg;
+  document.getElementById('dlgPv').innerHTML = d[5] ? '<img class="cert-preview" src="'+d[5]+'" alt="Certificate preview: '+d[0]+'">' : svg;
   document.getElementById('dlgS').textContent = d[1];
   document.getElementById('dlgT').textContent = d[0];
   document.getElementById('dlgD').textContent = d[2];
   document.getElementById('dlgG').innerHTML = d[3].map(function(t){ return '<span>'+t+'</span>'; }).join('');
+  var certLink = document.getElementById('dlgCertificateLink');
+  certLink.hidden = !d[4];
+  if (d[4]) certLink.href = d[4];
   if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', '');
 }
 dlg.querySelector('.x').addEventListener('click', function(){ dlg.close(); });
